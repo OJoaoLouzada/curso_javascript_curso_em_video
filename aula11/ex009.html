@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>País</title>
+</head>
+<body>
+  <h1>Em qual país você vive?</h1>
+  <input type="text" name="pais" id="pais">
+  <input type="button" value="Verificar" onclick="pais()">
+  <div id="res"></div>
+
+  <script>
+    function pais() {
+      var vive = document.querySelector('input#pais')
+      var res = document.querySelector('div#res')
+      var resid = String(vive.value)
+      if (resid == 'Brasil') {
+        res.innerHTML = (`Você vive em sua terra natal!`)
+      } else {
+        res.innerHTML = (`Você é estrangeiro!`)
+      }
+    }
+  </script>
+</body>
+</html>
